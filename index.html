@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Erdal Bayhan — Web Tasarım &amp; Dijital Hizmetler</title>
+  <meta name="description" content="Erdal Bayhan — Web tasarımı, geliştirme, marka kimliği, SEO, GEO ve SEM hizmetleri." />
+  <meta name="author" content="Erdal Bayhan" />
+  <link rel="canonical" href="https://erdalbayhan.com" />
+
+  <meta property="og:title" content="Erdal Bayhan — Web Tasarım &amp; Dijital Hizmetler" />
+  <meta property="og:description" content="Web tasarımı, geliştirme, marka kimliği ve dijital pazarlama hizmetleri." />
+  <meta property="og:url" content="https://erdalbayhan.com" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://erdalbayhan.com/assets/og-image.jpg" />
+
+  <link rel="icon" href="/assets/favicon.ico" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Erdal Bayhan",
+    "url": "https://erdalbayhan.com",
+    "jobTitle": "Web Tasarımcı & Dijital Pazarlama Uzmanı",
+    "email": "erdalbayhan@gmail.com"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ── NAVIGATION ── -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Ana menü">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">EB<span class="logo-dot">.</span></a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#hakkimda"  class="nav-link" data-tr="Hakkımızda" data-en="About Us">Hakkımızda</a></li>
+        <li><a href="#hizmetler" class="nav-link" data-tr="Hizmetler" data-en="Services">Hizmetler</a></li>
+        <li><a href="#portfolyo" class="nav-link" data-tr="Portföy"   data-en="Portfolio">Portföy</a></li>
+        <li><a href="#iletisim"  class="nav-link" data-tr="İletişim"  data-en="Contact">İletişim</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="lang-btn" id="lang-btn" aria-label="Dil değiştir / Switch language">
+          <span class="lang-tr">TR</span><span class="lang-sep">/</span><span class="lang-en">EN</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menü" aria-expanded="false" aria-controls="nav-links">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section id="hero" aria-label="Giriş">
+    <!-- Çapraz akan portföy şeritleri -->
+    <div class="hero-marquee" aria-hidden="true">
+      <div class="marquee-row">
+        <div class="marquee-track marquee-track--left">
+          <img src="assets/images/portfolio-1-1.webp" alt="" /><img src="assets/images/portfolio-2-1.webp" alt="" /><img src="assets/images/portfolio-3-1.webp" alt="" /><img src="assets/images/portfolio-4-1.webp" alt="" /><img src="assets/images/portfolio-5-1.webp" alt="" /><img src="assets/images/portfolio-6-1.webp" alt="" />
+          <img src="assets/images/portfolio-1-1.webp" alt="" /><img src="assets/images/portfolio-2-1.webp" alt="" /><img src="assets/images/portfolio-3-1.webp" alt="" /><img src="assets/images/portfolio-4-1.webp" alt="" /><img src="assets/images/portfolio-5-1.webp" alt="" /><img src="assets/images/portfolio-6-1.webp" alt="" />
+          <img src="assets/images/portfolio-1-1.webp" alt="" /><img src="assets/images/portfolio-2-1.webp" alt="" /><img src="assets/images/portfolio-3-1.webp" alt="" /><img src="assets/images/portfolio-4-1.webp" alt="" /><img src="assets/images/portfolio-5-1.webp" alt="" /><img src="assets/images/portfolio-6-1.webp" alt="" />
+          <img src="assets/images/portfolio-1-1.webp" alt="" /><img src="assets/images/portfolio-2-1.webp" alt="" /><img src="assets/images/portfolio-3-1.webp" alt="" /><img src="assets/images/portfolio-4-1.webp" alt="" /><img src="assets/images/portfolio-5-1.webp" alt="" /><img src="assets/images/portfolio-6-1.webp" alt="" />
+        </div>
+      </div>
+      <div class="marquee-row">
+        <div class="marquee-track marquee-track--right">
+          <img src="assets/images/portfolio-1-2.webp" alt="" /><img src="assets/images/portfolio-2-2.webp" alt="" /><img src="assets/images/portfolio-3-2.webp" alt="" /><img src="assets/images/portfolio-4-2.webp" alt="" /><img src="assets/images/portfolio-5-2.webp" alt="" /><img src="assets/images/portfolio-6-2.webp" alt="" />
+          <img src="assets/images/portfolio-1-2.webp" alt="" /><img src="assets/images/portfolio-2-2.webp" alt="" /><img src="assets/images/portfolio-3-2.webp" alt="" /><img src="assets/images/portfolio-4-2.webp" alt="" /><img src="assets/images/portfolio-5-2.webp" alt="" /><img src="assets/images/portfolio-6-2.webp" alt="" />
+          <img src="assets/images/portfolio-1-2.webp" alt="" /><img src="assets/images/portfolio-2-2.webp" alt="" /><img src="assets/images/portfolio-3-2.webp" alt="" /><img src="assets/images/portfolio-4-2.webp" alt="" /><img src="assets/images/portfolio-5-2.webp" alt="" /><img src="assets/images/portfolio-6-2.webp" alt="" />
+          <img src="assets/images/portfolio-1-2.webp" alt="" /><img src="assets/images/portfolio-2-2.webp" alt="" /><img src="assets/images/portfolio-3-2.webp" alt="" /><img src="assets/images/portfolio-4-2.webp" alt="" /><img src="assets/images/portfolio-5-2.webp" alt="" /><img src="assets/images/portfolio-6-2.webp" alt="" />
+        </div>
+      </div>
+      <div class="marquee-row">
+        <div class="marquee-track marquee-track--right" style="animation-duration:28s">
+          <img src="assets/images/portfolio-1-3.webp" alt="" /><img src="assets/images/portfolio-2-3.webp" alt="" /><img src="assets/images/portfolio-3-3.webp" alt="" /><img src="assets/images/portfolio-4-3.webp" alt="" /><img src="assets/images/portfolio-5-3.webp" alt="" /><img src="assets/images/portfolio-6-3.webp" alt="" />
+          <img src="assets/images/portfolio-1-3.webp" alt="" /><img src="assets/images/portfolio-2-3.webp" alt="" /><img src="assets/images/portfolio-3-3.webp" alt="" /><img src="assets/images/portfolio-4-3.webp" alt="" /><img src="assets/images/portfolio-5-3.webp" alt="" /><img src="assets/images/portfolio-6-3.webp" alt="" />
+          <img src="assets/images/portfolio-1-3.webp" alt="" /><img src="assets/images/portfolio-2-3.webp" alt="" /><img src="assets/images/portfolio-3-3.webp" alt="" /><img src="assets/images/portfolio-4-3.webp" alt="" /><img src="assets/images/portfolio-5-3.webp" alt="" /><img src="assets/images/portfolio-6-3.webp" alt="" />
+          <img src="assets/images/portfolio-1-3.webp" alt="" /><img src="assets/images/portfolio-2-3.webp" alt="" /><img src="assets/images/portfolio-3-3.webp" alt="" /><img src="assets/images/portfolio-4-3.webp" alt="" /><img src="assets/images/portfolio-5-3.webp" alt="" /><img src="assets/images/portfolio-6-3.webp" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div class="blob blob-1" aria-hidden="true"></div>
+    <div class="blob blob-2" aria-hidden="true"></div>
+    <div class="blob blob-3" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <p class="hero-greeting reveal" data-tr="Merhaba, biz" data-en="Hi, We're">Merhaba, biz</p>
+      <h1 class="hero-name reveal" data-tr="Nöbetçi Webçiler :)" data-en="On-Duty Masters">Nöbetçi Webçiler :)</h1>
+      <div class="hero-role reveal">
+        <span class="role-prefix" aria-hidden="true">— </span>
+        <span id="typed-output" aria-live="polite"></span>
+      </div>
+      <p class="hero-desc reveal"
+         data-tr="Dijital dünyada iz bırakan projeler üretiyorum. Tasarımdan geliştirmeye, markalaşmadan büyümeye."
+         data-en="I build projects that leave a mark in the digital world. From design to development, from branding to growth.">
+        Dijital dünyada iz bırakan projeler üretiyorum. Tasarımdan geliştirmeye, markalaşmadan büyümeye.
+      </p>
+      <div class="hero-cta reveal">
+        <a href="#portfolyo" class="btn btn-primary" data-tr="Çalışmalarıma Bak" data-en="View My Work">Çalışmalarıma Bak</a>
+        <a href="#iletisim"  class="btn btn-outline"  data-tr="İletişime Geç"    data-en="Get In Touch">İletişime Geç</a>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint" aria-hidden="true"><span class="scroll-line"></span></div>
+  </section>
+
+  <!-- ── ABOUT ── -->
+  <section id="hakkimda" aria-labelledby="hakkimda-title">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag" data-tr="Hakkımızda" data-en="About Us">Hakkımızda</span>
+        <h2 class="section-title" id="hakkimda-title"
+            data-tr="Biz kimiz, biraz anlatalım"
+            data-en="A bit about us">Biz kimiz, biraz anlatalım</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-visual reveal">
+          <div class="about-avatar">
+            <div class="avatar-glow" aria-hidden="true"></div>
+            <div class="avatar-initials" aria-label="Erdal Bayhan">EB</div>
+          </div>
+          <div class="about-stats">
+            <div class="stat-item reveal">
+              <span class="stat-number">6+</span>
+              <span class="stat-label" data-tr="Proje" data-en="Projects">Proje</span>
+            </div>
+            <div class="stat-item reveal">
+              <span class="stat-number">7</span>
+              <span class="stat-label" data-tr="Hizmet" data-en="Services">Hizmet</span>
+            </div>
+            <div class="stat-item reveal">
+              <span class="stat-number">∞</span>
+              <span class="stat-label" data-tr="Tutku" data-en="Passion">Tutku</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-text reveal">
+          <p data-tr="Web dünyasında hem tasarım hem de geliştirme tarafında çalışan bir dijital ekip olarak, projelere bütüncül bir bakış açısı getiriyoruz."
+             data-en="As a digital team working on both design and development, we bring a holistic perspective to every project.">
+            Web dünyasında hem tasarım hem de geliştirme tarafında çalışan bir dijital ekip olarak, projelere bütüncül bir bakış açısı getiriyoruz.
+          </p>
+          <p data-tr="Güzel görünen ama aynı zamanda işleyen, hız kesmeyen ve arama motorlarında öne çıkan dijital deneyimler tasarlıyoruz."
+             data-en="We design digital experiences that look great, perform fast, and stand out in search engines.">
+            Güzel görünen ama aynı zamanda işleyen, hız kesmeyen ve arama motorlarında öne çıkan dijital deneyimler tasarlıyoruz.
+          </p>
+          <div class="about-tags" aria-label="Uzmanlık alanları">
+            <span class="tag">HTML / CSS / JS</span>
+            <span class="tag">UI / UX</span>
+            <span class="tag">SEO</span>
+            <span class="tag">GEO</span>
+            <span class="tag">SEM</span>
+            <span class="tag">Branding</span>
+          </div>
+          <a href="#iletisim" class="btn btn-primary" data-tr="Birlikte çalışalım" data-en="Let's work together">Birlikte çalışalım</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SERVICES ── -->
+  <section id="hizmetler" aria-labelledby="hizmetler-title">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag" data-tr="Hizmetler" data-en="Services">Hizmetler</span>
+        <h2 class="section-title" id="hizmetler-title"
+            data-tr="Neler yapabiliriz?" data-en="What can we do?">Neler yapabiliriz?</h2>
+      </div>
+
+      <div class="services-grid">
+
+        <div class="service-card reveal">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9.53 16.122a3 3 0 0 0-5.78 1.128 2.25 2.25 0 0 1-2.4 2.245 4.5 4.5 0 0 0 8.4-2.245c0-.399-.078-.78-.22-1.128Zm0 0a15.998 15.998 0 0 0 3.388-1.62m-5.043-.025a15.994 15.994 0 0 1 1.622-3.395m3.42 3.42a15.995 15.995 0 0 0 4.764-4.648l3.876-5.814a1.151 1.151 0 0 0-1.597-1.597L14.146 6.32a15.996 15.996 0 0 0-4.649 4.763m3.42 3.42a6.776 6.776 0 0 0-3.42-3.42"/></svg>
+          </div>
+          <h3 data-tr="Web Tasarımı" data-en="Web Design">Web Tasarımı</h3>
+          <p data-tr="Kullanıcı odaklı, mobil uyumlu ve modern web arayüzleri tasarlıyoruz."
+             data-en="We design user-centered, mobile-responsive and modern web interfaces.">
+            Kullanıcı odaklı, mobil uyumlu ve modern web arayüzleri tasarlıyoruz.
+          </p>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z"/></svg>
+          </div>
+          <h3 data-tr="Web Geliştirme" data-en="Web Development">Web Geliştirme</h3>
+          <p data-tr="Hızlı, güvenli ve ölçeklenebilir web uygulamaları geliştiriyoruz."
+             data-en="We develop fast, secure and scalable web applications.">
+            Hızlı, güvenli ve ölçeklenebilir web uygulamaları geliştiriyoruz.
+          </p>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z"/></svg>
+          </div>
+          <h3 data-tr="Marka Kimliği &amp; Logo" data-en="Brand Identity &amp; Logo">Marka Kimliği &amp; Logo</h3>
+          <p data-tr="Markanızı rakiplerinden ayıran güçlü bir kimlik ve görsel dil oluşturuyoruz."
+             data-en="We create a strong identity and visual language that sets your brand apart.">
+            Markanızı rakiplerinden ayıran güçlü bir kimlik ve görsel dil oluşturuyoruz.
+          </p>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15.59 14.37a6 6 0 0 1-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 0 0 6.16-12.12A14.98 14.98 0 0 0 9.631 8.41m5.96 5.96a14.926 14.926 0 0 1-5.841 2.58m-.119-8.54a6 6 0 0 0-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 0 0-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 0 1-2.448-2.448 14.9 14.9 0 0 1 .06-.312m-2.24 2.39a4.493 4.493 0 0 0-1.757 4.306 4.493 4.493 0 0 0 4.306-1.758M16.5 9a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z"/></svg>
+          </div>
+          <h3 data-tr="Dijital Projeler" data-en="Digital Projects">Dijital Projeler</h3>
+          <p data-tr="Fikrinizi dijitale taşıyor, baştan sona proje yönetimini üstleniyoruz."
+             data-en="We take your idea digital and manage the project end to end.">
+            Fikrinizi dijitale taşıyor, baştan sona proje yönetimini üstleniyoruz.
+          </p>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"/></svg>
+          </div>
+          <h3>SEO</h3>
+          <p data-tr="Sitenizi Google'da üst sıralara taşıyan teknik ve içerik odaklı stratejiler."
+             data-en="Technical and content-driven strategies that push your site to the top of Google.">
+            Sitenizi Google'da üst sıralara taşıyan teknik ve içerik odaklı stratejiler.
+          </p>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253M3 12a8.959 8.959 0 0 0 .284 2.253"/></svg>
+          </div>
+          <h3>GEO</h3>
+          <p data-tr="Yapay zeka arama motorlarında öne çıkmak için Generative Engine Optimization."
+             data-en="Generative Engine Optimization to stand out in AI-powered search engines.">
+            Yapay zeka arama motorlarında öne çıkmak için Generative Engine Optimization.
+          </p>
+        </div>
+
+        <div class="service-card reveal service-card--last">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941"/></svg>
+          </div>
+          <h3>SEM</h3>
+          <p data-tr="Google Ads ve sosyal medya reklamlarıyla hedef kitlenize en doğru anda ulaşın."
+             data-en="Reach your audience at the right moment with Google Ads and social media advertising.">
+            Google Ads ve sosyal medya reklamlarıyla hedef kitlenize en doğru anda ulaşın.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PORTFOLIO ── -->
+  <section id="portfolyo" aria-labelledby="portfolyo-title">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag" data-tr="Portföy" data-en="Portfolio">Portföy</span>
+        <h2 class="section-title" id="portfolyo-title"
+            data-tr="Seçilmiş çalışmalar" data-en="Selected works">Seçilmiş çalışmalar</h2>
+      </div>
+
+      <div class="portfolio-grid">
+
+        <!-- Card 1 — SaasMetre -->
+        <article class="portfolio-card reveal" data-tilt>
+          <div class="portfolio-slider" style="background:linear-gradient(135deg,#1a1d2e,#C9406044)">
+            <div class="slider-track">
+              <img src="assets/images/portfolio-1-1.webp" alt="SaasMetre — Ana sayfa" loading="lazy" />
+              <img src="assets/images/portfolio-1-2.webp" alt="SaasMetre — Araç bulma" loading="lazy" />
+              <img src="assets/images/portfolio-1-3.webp" alt="SaasMetre — Karşılaştırma" loading="lazy" />
+            </div>
+            <div class="slider-dots" aria-hidden="true">
+              <span class="dot active"></span><span class="dot"></span><span class="dot"></span>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <div class="portfolio-meta">
+              <div class="portfolio-tags">
+                <span class="portfolio-tag">Web Design</span>
+                <span class="portfolio-tag">Development</span>
+                <span class="portfolio-tag">SEO</span>
+                <span class="portfolio-tag">GEO</span>
+                <span class="portfolio-tag">SEM</span>
+              </div>
+              <h3>SaasMetre</h3>
+              <p data-tr="E-ticaret işletmeleri için doğru SaaS aracını bulup karşılaştıran platform."
+                 data-en="A platform helping e-commerce businesses find and compare the right SaaS tools.">
+                E-ticaret işletmeleri için doğru SaaS aracını bulup karşılaştıran platform.
+              </p>
+            </div>
+            <a href="https://www.saasmetre.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" data-tr="Siteyi Gör" data-en="View Site">Siteyi Gör</a>
+          </div>
+        </article>
+
+        <!-- Card 2 — GetiriAnaliz -->
+        <article class="portfolio-card reveal" data-tilt>
+          <div class="portfolio-slider" style="background:linear-gradient(135deg,#1a1d2e,#E8789844)">
+            <div class="slider-track">
+              <img src="assets/images/portfolio-2-1.webp" alt="GetiriAnaliz — görsel 1" loading="lazy" />
+              <img src="assets/images/portfolio-2-2.webp" alt="GetiriAnaliz — görsel 2" loading="lazy" />
+              <img src="assets/images/portfolio-2-3.webp" alt="GetiriAnaliz — görsel 3" loading="lazy" />
+            </div>
+            <div class="slider-dots" aria-hidden="true">
+              <span class="dot active"></span><span class="dot"></span><span class="dot"></span>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <div class="portfolio-meta">
+              <div class="portfolio-tags">
+                <span class="portfolio-tag">Web Design</span>
+                <span class="portfolio-tag">Development</span>
+                <span class="portfolio-tag">SEO</span>
+                <span class="portfolio-tag">GEO</span>
+                <span class="portfolio-tag">SEM</span>
+              </div>
+              <h3>GetiriAnaliz</h3>
+              <p data-tr="Katılım bankası kâr payı, katılım fonu ve tasarruf finansmanı ürünlerini karşılaştıran platform."
+                 data-en="A platform comparing participation bank profit shares, funds, and savings financing products.">
+                Katılım bankası kâr payı, katılım fonu ve tasarruf finansmanı ürünlerini karşılaştıran platform.
+              </p>
+            </div>
+            <a href="https://www.getirianaliz.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" data-tr="Siteyi Gör" data-en="View Site">Siteyi Gör</a>
+          </div>
+        </article>
+
+        <!-- Card 3 — Eligta -->
+        <article class="portfolio-card reveal" data-tilt>
+          <div class="portfolio-slider" style="background:linear-gradient(135deg,#1a1d2e,#A8325844)">
+            <div class="slider-track">
+              <img src="assets/images/portfolio-3-1.webp" alt="Eligta — görsel 1" loading="lazy" />
+              <img src="assets/images/portfolio-3-2.webp" alt="Eligta — görsel 2" loading="lazy" />
+              <img src="assets/images/portfolio-3-3.webp" alt="Eligta — görsel 3" loading="lazy" />
+            </div>
+            <div class="slider-dots" aria-hidden="true">
+              <span class="dot active"></span><span class="dot"></span><span class="dot"></span>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <div class="portfolio-meta">
+              <div class="portfolio-tags">
+                <span class="portfolio-tag">Web Design</span>
+                <span class="portfolio-tag">Development</span>
+                <span class="portfolio-tag">SEO</span>
+                <span class="portfolio-tag">GEO</span>
+                <span class="portfolio-tag">SEM</span>
+              </div>
+              <h3>Eligta</h3>
+              <p data-tr="Yapay zeka destekli akıllı ürün rehberiyle doğru ürünü kolayca keşfet."
+                 data-en="Discover the right product easily with an AI-powered smart product guide.">
+                Yapay zeka destekli akıllı ürün rehberiyle doğru ürünü kolayca keşfet.
+              </p>
+            </div>
+            <a href="https://www.eligta.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" data-tr="Siteyi Gör" data-en="View Site">Siteyi Gör</a>
+          </div>
+        </article>
+
+        <!-- Card 4 — Goldstone Global -->
+        <article class="portfolio-card reveal" data-tilt>
+          <div class="portfolio-slider" style="background:linear-gradient(135deg,#1a1d2e,#C9406055)">
+            <div class="slider-track">
+              <img src="assets/images/portfolio-4-1.webp" alt="Goldstone Global — görsel 1" loading="lazy" />
+              <img src="assets/images/portfolio-4-2.webp" alt="Goldstone Global — görsel 2" loading="lazy" />
+              <img src="assets/images/portfolio-4-3.webp" alt="Goldstone Global — görsel 3" loading="lazy" />
+            </div>
+            <div class="slider-dots" aria-hidden="true">
+              <span class="dot active"></span><span class="dot"></span><span class="dot"></span>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <div class="portfolio-meta">
+              <div class="portfolio-tags">
+                <span class="portfolio-tag">Web Design</span>
+                <span class="portfolio-tag">Development</span>
+                <span class="portfolio-tag">Digital Projects</span>
+                <span class="portfolio-tag">SEO</span>
+              </div>
+              <h3>Goldstone Global</h3>
+              <p data-tr="Uluslararası ticaret danışmanlığı ve dış ticaret çözümleri sunan global danışmanlık firması."
+                 data-en="A global consultancy offering international trade advisory and foreign trade solutions.">
+                Uluslararası ticaret danışmanlığı ve dış ticaret çözümleri sunan global danışmanlık firması.
+              </p>
+            </div>
+            <a href="https://www.goldstoneglb.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" data-tr="Siteyi Gör" data-en="View Site">Siteyi Gör</a>
+          </div>
+        </article>
+
+        <!-- Card 5 — Sarbez Medikal -->
+        <article class="portfolio-card reveal" data-tilt>
+          <div class="portfolio-slider" style="background:linear-gradient(135deg,#1a1d2e,#E8789855)">
+            <div class="slider-track">
+              <img src="assets/images/portfolio-5-1.webp" alt="Sarbez Medikal — görsel 1" loading="lazy" />
+              <img src="assets/images/portfolio-5-2.webp" alt="Sarbez Medikal — görsel 2" loading="lazy" />
+              <img src="assets/images/portfolio-5-3.webp" alt="Sarbez Medikal — görsel 3" loading="lazy" />
+            </div>
+            <div class="slider-dots" aria-hidden="true">
+              <span class="dot active"></span><span class="dot"></span><span class="dot"></span>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <div class="portfolio-meta">
+              <div class="portfolio-tags">
+                <span class="portfolio-tag">Web Design</span>
+                <span class="portfolio-tag">Development</span>
+                <span class="portfolio-tag">Digital Projects</span>
+                <span class="portfolio-tag">SEO</span>
+              </div>
+              <h3>Sarbez Medikal</h3>
+              <p data-tr="Kutu mendil, ıslak mendil imalatı ve medikal sarf malzemeleri satışı."
+                 data-en="Manufacturer and supplier of tissue paper, wet wipes, and medical consumables.">
+                Kutu mendil, ıslak mendil imalatı ve medikal sarf malzemeleri satışı.
+              </p>
+            </div>
+            <a href="https://www.sarbez.com.tr" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" data-tr="Siteyi Gör" data-en="View Site">Siteyi Gör</a>
+          </div>
+        </article>
+
+        <!-- Card 6 — Sensible Metals -->
+        <article class="portfolio-card reveal" data-tilt>
+          <div class="portfolio-slider" style="background:linear-gradient(135deg,#1a1d2e,#A8325855)">
+            <div class="slider-track">
+              <img src="assets/images/portfolio-6-1.webp" alt="Sensible Metals — görsel 1" loading="lazy" />
+              <img src="assets/images/portfolio-6-2.webp" alt="Sensible Metals — görsel 2" loading="lazy" />
+              <img src="assets/images/portfolio-6-3.webp" alt="Sensible Metals — görsel 3" loading="lazy" />
+            </div>
+            <div class="slider-dots" aria-hidden="true">
+              <span class="dot active"></span><span class="dot"></span><span class="dot"></span>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <div class="portfolio-meta">
+              <div class="portfolio-tags">
+                <span class="portfolio-tag">Web Design</span>
+                <span class="portfolio-tag">Development</span>
+                <span class="portfolio-tag">Digital Projects</span>
+                <span class="portfolio-tag">SEO</span>
+              </div>
+              <h3>Sensible Metals</h3>
+              <p data-tr="ISO 9001:2015 ve AS 9100 sertifikalı hassas döküm üreticisi."
+                 data-en="ISO 9001:2015 and AS 9100 certified precision casting manufacturer.">
+                ISO 9001:2015 ve AS 9100 sertifikalı hassas döküm üreticisi.
+              </p>
+            </div>
+            <a href="https://www.sensiblemetals.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" data-tr="Siteyi Gör" data-en="View Site">Siteyi Gör</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section id="iletisim" aria-labelledby="iletisim-title">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag" data-tr="İletişim" data-en="Contact">İletişim</span>
+        <h2 class="section-title" id="iletisim-title"
+            data-tr="Bir projen mi var?" data-en="Got a project?">Bir projen mi var?</h2>
+        <p class="section-subtitle"
+           data-tr="Konuşalım. Formu doldurun, en kısa sürede dönelim."
+           data-en="Let's talk. Fill out the form and we'll get back to you soon.">
+          Konuşalım. Formu doldurun, en kısa sürede dönelim.
+        </p>
+      </div>
+
+      <div class="contact-wrapper">
+        <form id="contact-form" class="contact-form reveal" novalidate>
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+          <div class="form-group">
+            <label for="name" data-tr="Adınız" data-en="Your Name">Adınız</label>
+            <input type="text" id="name" name="name" required autocomplete="name"
+              data-placeholder-tr="Adınız Soyadınız" data-placeholder-en="John Doe"
+              placeholder="Adınız Soyadınız" />
+          </div>
+
+          <div class="form-group">
+            <label for="email" data-tr="E-posta" data-en="Email">E-posta</label>
+            <input type="email" id="email" name="email" required autocomplete="email"
+              data-placeholder-tr="ornek@mail.com" data-placeholder-en="hello@example.com"
+              placeholder="ornek@mail.com" />
+          </div>
+
+          <div class="form-group form-group--full">
+            <label for="message" data-tr="Mesajınız" data-en="Your Message">Mesajınız</label>
+            <textarea id="message" name="message" rows="5" required
+              data-placeholder-tr="Projenizden bahsedin..."
+              data-placeholder-en="Tell me about your project..."
+              placeholder="Projenizden bahsedin..."></textarea>
+          </div>
+
+          <div class="form-group form-group--full form-submit">
+            <button type="submit" class="btn btn-primary btn-lg" id="submit-btn">
+              <span class="btn-text" data-tr="Gönder" data-en="Send Message">Gönder</span>
+              <span class="btn-loader" aria-hidden="true"></span>
+            </button>
+            <p class="form-status" id="form-status" role="alert" aria-live="polite"></p>
+          </div>
+        </form>
+
+        <div class="contact-info reveal">
+          <div class="contact-detail">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg>
+            <a href="mailto:erdalbayhan@gmail.com" data-tr="E-posta Gönder" data-en="Email Us">E-posta Gönder</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <a href="#hero" class="footer-logo">EB<span class="logo-dot">.</span></a>
+        <p class="footer-copy">
+          © <span id="footer-year"></span> Erdal Bayhan.
+          <span data-tr="Tüm hakları saklıdır." data-en="All rights reserved.">Tüm hakları saklıdır.</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
