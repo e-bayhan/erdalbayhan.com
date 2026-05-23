@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 44" role="img" aria-label="On-Duty Masters">
   <defs>
     <linearGradient id="odm-g" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#C94060"/>
-      <stop offset="100%" stop-color="#E87898"/>
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#A78BFA"/>
     </linearGradient>
     <linearGradient id="odm-g2" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#C94060"/>
-      <stop offset="100%" stop-color="#E87898"/>
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#A78BFA"/>
     </linearGradient>
   </defs>
 
