@@ -8,15 +8,17 @@ const TYPED = {
     'Web Tasarımcılarıyız.',
     'Web Geliştiricileriyiz.',
     'Marka Kimliği Uzmanlarıyız.',
+    'Dijital Proje Ortaklarıyız.',
     'SEO Uzmanlarıyız.',
-    'Dijital Proje Yöneticileriyiz.',
+    'Sosyal Medya Uzmanlarıyız.',
   ],
   en: [
     'Web Designers.',
     'Web Developers.',
     'Brand Identity Experts.',
+    'Digital Project Partners.',
     'SEO Specialists.',
-    'Digital Project Managers.',
+    'Social Media Experts.',
   ],
 };
 
