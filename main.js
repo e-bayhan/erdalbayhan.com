@@ -90,6 +90,7 @@ document.getElementById('lang-btn').addEventListener('click', () => {
 const navbar    = document.getElementById('navbar');
 const hamburger = document.getElementById('hamburger');
 const navLinks  = document.getElementById('nav-links');
+const navClose  = document.getElementById('nav-close');
 const sections  = document.querySelectorAll('section[id]');
 
 window.addEventListener('scroll', () => {
@@ -103,6 +104,8 @@ hamburger.addEventListener('click', () => {
   hamburger.setAttribute('aria-expanded', String(open));
   document.body.style.overflow = open ? 'hidden' : '';
 });
+
+navClose.addEventListener('click', closeMenu);
 
 navLinks.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', closeMenu);

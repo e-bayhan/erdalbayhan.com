@@ -29,7 +29,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: var(--nav-h);
+  scroll-padding-top: calc(var(--nav-h) + 20px);
 }
 
 body {
@@ -267,6 +267,22 @@ html[lang="en"] .lang-en { color: var(--accent-main); }
   font-weight: 700;
   color: var(--text-primary);
 }
+
+.nav-close {
+  display: none;
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  transition: color var(--ease);
+}
+.nav-close svg { width: 24px; height: 24px; }
+.nav-close:hover { color: var(--text-primary); }
+.nav-links.open .nav-close { display: flex; }
 
 /* ═══════════════════════════════════════════
    HERO
