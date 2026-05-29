@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Non-www → www yönlendirmesi
+RewriteCond %{HTTP_HOST} ^erdalbayhan\.com$ [NC]
+RewriteRule ^(.*)$ https://www.erdalbayhan.com/$1 [R=301,L]
+
+# HTTP → HTTPS yönlendirmesi
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
