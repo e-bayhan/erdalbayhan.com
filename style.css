@@ -812,8 +812,7 @@ html[lang="en"] .lang-en { color: var(--accent-main); }
   /* 6-col base lets 3 cards/row (each span 2) and centers the last-row pair */
   .services-grid  { grid-template-columns: repeat(6, 1fr); }
   .service-card   { grid-column: span 2; }
-  .service-card:nth-child(7) { grid-column: 2 / 4; }
-  .service-card:nth-child(8) { grid-column: 4 / 6; }
+  .service-card:nth-child(7) { grid-column: 3 / 5; }
 
   .portfolio-grid { grid-template-columns: repeat(3, 1fr); }
 }
