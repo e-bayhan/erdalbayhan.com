@@ -43,13 +43,13 @@ function applyLang(lang) {
 
   /* Page meta */
   if (lang === 'en') {
-    document.title = 'Erdal Bayhan — Web Design & Digital Services';
+    document.title = 'On-Duty Masters — Seasoned Digital Agency';
     document.querySelector('meta[name="description"]').content =
-      'Erdal Bayhan — Web design, development, brand identity, SEO, GEO and SEM services.';
+      'We help brands master their digital presence, manage their digital assets, and win the digital competition. Design and develop new ideas, create brand identity, manage projects that will grow your business.';
   } else {
-    document.title = 'Erdal Bayhan — Web Tasarım & Dijital Hizmetler';
+    document.title = 'On-Duty Masters — Tecrübeli Dijital Ajans';
     document.querySelector('meta[name="description"]').content =
-      'Erdal Bayhan — Web tasarımı, geliştirme, marka kimliği, SEO, GEO ve SEM hizmetleri.';
+      'Markanızın dijital görünürlüğünü güçlendiriyor, dijital varlıklarını yönetiyor ve dijital rekabette öne çıkmasını sağlıyoruz. Yeni fikirleri tasarlıyor, marka kimliği oluşturuyor, işinizi büyütecek projeleri yönetiyoruz.';
   }
 
   /* Reinit Typed with new strings */
