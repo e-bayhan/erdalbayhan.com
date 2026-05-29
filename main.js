@@ -99,7 +99,7 @@ hamburger.addEventListener('click', () => {
   document.body.style.overflow = open ? 'hidden' : '';
 });
 
-navClose.addEventListener('click', closeMenu);
+if (navClose) navClose.addEventListener('click', closeMenu);
 
 navLinks.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', closeMenu);
