@@ -5,20 +5,14 @@
 /* ── Typed.js strings per language ── */
 const TYPED = {
   tr: [
-    'Web Tasarımcılarıyız.',
-    'Web Geliştiricileriyiz.',
-    'Marka Kimliği Uzmanlarıyız.',
-    'Dijital Proje Ortaklarıyız.',
-    'SEO Uzmanlarıyız.',
-    'Sosyal Medya Uzmanlarıyız.',
+    'Dijital Görünürlük Ustalarıyız.',
+    'Dijital Varlık Yöneticileriyiz.',
+    'Dijital Rekabet Uzmanlarıyız.',
   ],
   en: [
-    'Web Designers.',
-    'Web Developers.',
-    'Brand Identity Experts.',
-    'Digital Project Partners.',
-    'SEO Specialists.',
-    'Social Media Experts.',
+    'Digital Presence Masters.',
+    'Digital Assets Managers.',
+    'Digital Competition Experts.',
   ],
 };
 
