@@ -17,8 +17,7 @@ const TYPED = {
 };
 
 /* ── State ── */
-let currentLang = localStorage.getItem('eb-lang') ||
-  (navigator.language.startsWith('tr') ? 'tr' : 'en');
+let currentLang = localStorage.getItem('eb-lang') || 'en';
 
 let typedInstance = null;
 
