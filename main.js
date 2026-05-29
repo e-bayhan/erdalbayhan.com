@@ -81,36 +81,36 @@ document.getElementById('lang-btn').addEventListener('click', () => {
 /* ════════════════════════════════════════════
    NAVBAR
 ════════════════════════════════════════════ */
-const navbar    = document.getElementById('navbar');
-const hamburger = document.getElementById('hamburger');
-const navLinks  = document.getElementById('nav-links');
-const navClose  = document.getElementById('nav-close');
-const sections  = document.querySelectorAll('section[id]');
+const navbar          = document.getElementById('navbar');
+const hamburger       = document.getElementById('hamburger');
+const mobileMenu      = document.getElementById('mobile-menu');
+const mobileMenuClose = document.getElementById('mobile-menu-close');
+const sections        = document.querySelectorAll('section[id]');
 
 window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', window.scrollY > 48);
   highlightNav();
 }, { passive: true });
 
-hamburger.addEventListener('click', () => {
-  const open = navLinks.classList.toggle('open');
-  hamburger.classList.toggle('open');
-  hamburger.setAttribute('aria-expanded', String(open));
-  document.body.style.overflow = open ? 'hidden' : '';
-});
-
-if (navClose) navClose.addEventListener('click', closeMenu);
-
-navLinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', closeMenu);
-});
+function openMenu() {
+  mobileMenu.classList.add('open');
+  hamburger.classList.add('open');
+  hamburger.setAttribute('aria-expanded', 'true');
+  document.body.style.overflow = 'hidden';
+}
 
 function closeMenu() {
-  navLinks.classList.remove('open');
+  mobileMenu.classList.remove('open');
   hamburger.classList.remove('open');
   hamburger.setAttribute('aria-expanded', 'false');
   document.body.style.overflow = '';
 }
+
+hamburger.addEventListener('click', openMenu);
+mobileMenuClose.addEventListener('click', closeMenu);
+mobileMenu.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', closeMenu);
+});
 
 function highlightNav() {
   const y = window.scrollY + 100;

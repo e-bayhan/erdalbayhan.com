@@ -45,9 +45,6 @@
       </a>
 
       <ul class="nav-links" id="nav-links">
-        <button class="nav-close" id="nav-close" aria-label="Menüyü kapat">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
-        </button>
         <li><a href="#hakkimda"  class="nav-link" data-tr="Hakkımızda" data-en="About Us">Hakkımızda</a></li>
         <li><a href="#hizmetler" class="nav-link" data-tr="Hizmetler" data-en="Services">Hizmetler</a></li>
         <li><a href="#portfolyo" class="nav-link" data-tr="Portföy"   data-en="Portfolio">Portföy</a></li>
@@ -58,12 +55,24 @@
         <button class="lang-btn" id="lang-btn" aria-label="Dil değiştir / Switch language">
           <span class="lang-tr">TR</span><span class="lang-sep">/</span><span class="lang-en">EN</span>
         </button>
-        <button class="hamburger" id="hamburger" aria-label="Menü" aria-expanded="false" aria-controls="nav-links">
+        <button class="hamburger" id="hamburger" aria-label="Menü" aria-expanded="false" aria-controls="mobile-menu">
           <span></span><span></span><span></span>
         </button>
       </div>
     </div>
   </nav>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Menüyü kapat">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+    <ul>
+      <li><a href="#hakkimda"  class="mobile-nav-link" data-tr="Hakkımızda" data-en="About Us">Hakkımızda</a></li>
+      <li><a href="#hizmetler" class="mobile-nav-link" data-tr="Hizmetler"  data-en="Services">Hizmetler</a></li>
+      <li><a href="#portfolyo" class="mobile-nav-link" data-tr="Portföy"    data-en="Portfolio">Portföy</a></li>
+      <li><a href="#iletisim"  class="mobile-nav-link" data-tr="İletişim"   data-en="Contact">İletişim</a></li>
+    </ul>
+  </div>
 
   <!-- ── HERO ── -->
   <section id="hero" aria-label="Giriş">
