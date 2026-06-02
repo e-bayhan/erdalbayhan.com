@@ -338,8 +338,8 @@ html[lang="en"] .lang-en { color: var(--accent-main); }
 }
 
 .marquee-track img {
-  width: 260px;
-  height: 162px;
+  width: 520px;
+  height: 324px;
   object-fit: cover;
   border-radius: var(--radius-md);
   flex-shrink: 0;
