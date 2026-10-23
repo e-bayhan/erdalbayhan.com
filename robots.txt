@@ -1,0 +1,47 @@
+# On-Duty Masters — https://www.erdalbayhan.com
+# Search engines and AI crawlers are welcome.
+
+User-agent: *
+Allow: /
+Disallow: /phpmailer/
+Disallow: /contact.php
+
+# OpenAI
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Google
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Microsoft Bing / Copilot
+User-agent: Bingbot
+Allow: /
+
+Sitemap: https://www.erdalbayhan.com/sitemap.xml

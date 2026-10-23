@@ -1,0 +1,36 @@
+# On-Duty Masters
+
+> On-Duty Masters ("Seasoned") is a digital agency led by Erdal Bayhan. We help brands master their digital presence, manage their digital assets, and win the digital competition — with end-to-end SEO & GEO & AI Search strategy, web design and development, brand identity, and digital project management. We serve clients in Turkish and English.
+
+Website: https://www.erdalbayhan.com/
+Languages: English, Turkish
+Contact: contact form at https://www.erdalbayhan.com/#iletisim
+
+## Services
+
+- SEO & GEO & AI Search Strategy: End-to-end search strategy for all web projects — sitemap, robots.txt, llms.txt, llms-full.txt, 404 pages, breadcrumbs, link previews for WhatsApp/X/Facebook, AI crawler access (ChatGPT, Claude, Perplexity, Google, Bing), IndexNow, page speed and image optimization, Google Search Console and Bing Webmaster Tools setup.
+- Digital Presence: SEO and GEO strategies to strengthen a brand's visibility across search engines and AI tools.
+- Digital Competition: Data-driven Google Ads and Meta campaigns with transparent reporting.
+- Digital Strategy: Competitor analysis, digital roadmaps and KPI setting.
+- Design & Development: Web design and development under one roof, from user-focused interfaces to robust backends.
+- Brand Identity: Logo, color palette, typography and brand guidelines.
+- Digital Assets: Strategic content and community management on Instagram, LinkedIn and TikTok.
+- Digital Ideas: From concept and prototype to product launch.
+- Digital Projects: End-to-end digital project management.
+
+## Portfolio
+
+- [SaasMetre](https://www.saasmetre.com): Platform helping e-commerce businesses find and compare SaaS tools.
+- [GetiriAnaliz](https://www.getirianaliz.com): Comparison of participation bank profit shares, funds and savings financing products.
+- [Eligta](https://www.eligta.com): AI-powered smart product guide.
+- [Goldstone Global](https://www.goldstoneglb.com): International trade advisory and foreign trade solutions.
+- [Sarbez Medikal](https://www.sarbez.com.tr): Manufacturer of tissue paper, wet wipes and medical consumables.
+- [Sensible Metals](https://www.sensiblemetals.com): ISO 9001:2015 and AS 9100 certified precision casting manufacturer.
+- [Dt. Ayşe Naime Altuntaş](https://naimekor.com): Multilingual (TR/EN/AR) dental clinic website in Bostancı, Istanbul.
+- [Techie News 4 All](https://techienews4all.blogspot.com): English-language tech news and reviews blog.
+- [Digital Marketing Technologies](https://digital-mar-tech.blogspot.com): English-language digital marketing blog.
+- [Dr. Cemal Külünkoğlu](https://www.cemalkulunkoglu.net): Personal website of an author and researcher — Quran translation and commentary, books and videos.
+
+## Optional
+
+- [Full content (llms-full.txt)](https://www.erdalbayhan.com/llms-full.txt): Complete site content in English and Turkish.

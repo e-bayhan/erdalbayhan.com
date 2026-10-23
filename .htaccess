@@ -1,5 +1,11 @@
 RewriteEngine On
 
+ErrorDocument 404 /404.html
+
+# llms.txt / robots.txt UTF-8 olarak sunulsun
+AddDefaultCharset UTF-8
+AddCharset UTF-8 .txt .xml
+
 # Non-www → www yönlendirmesi
 RewriteCond %{HTTP_HOST} ^erdalbayhan\.com$ [NC]
 RewriteRule ^(.*)$ https://www.erdalbayhan.com/$1 [R=301,L]
