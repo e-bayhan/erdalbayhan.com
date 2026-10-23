@@ -1,6 +1,6 @@
 # On-Duty Masters — Full Content
 
-> Digital agency led by Erdal Bayhan. "Seasoned" — SEO & GEO & AI Search Strategy Hackers. Website: https://www.erdalbayhan.com/ · Languages: English, Turkish · Contact: https://www.erdalbayhan.com/#iletisim
+> Digital agency led by Erdal Bayhan. "Seasoned" — SEO & GEO & AI Search Strategy Hackers. Website: https://www.erdalbayhan.com/ · Languages: English, Turkish · Contact: https://www.erdalbayhan.com/#iletisim · Founder: Erdal Bayhan (https://www.linkedin.com/in/erdalbayhan/)
 
 ---
 
@@ -124,6 +124,36 @@ Personal website of author and researcher Dr. Cemal Külünkoğlu, bringing toge
 
 - URL: https://www.cemalkulunkoglu.net
 
+### Frequently asked questions
+
+#### What is GEO (Generative Engine Optimization)?
+
+GEO is the practice of making a website easy for AI answer engines such as ChatGPT, Claude, Perplexity and Google AI Overviews to find, understand and cite. It complements SEO: SEO aims to rank in search results, GEO aims to be the source AI tools quote.
+
+#### What is llms.txt and why does my site need it?
+
+llms.txt is a plain-text file at the root of your site that summarizes who you are, what you offer and your key pages in a format large language models can read easily. Together with llms-full.txt, it helps AI tools describe your business accurately.
+
+#### Can AI tools like ChatGPT and Claude access my website?
+
+Only if your robots.txt allows their crawlers. We configure robots.txt to explicitly allow GPTBot, OAI-SearchBot, ClaudeBot, PerplexityBot, Google-Extended and Bingbot, so your content can appear in AI answers.
+
+#### What is IndexNow?
+
+IndexNow is a protocol that instantly notifies search engines such as Bing and Yandex when a page is created, updated or deleted, instead of waiting for crawlers to discover the change.
+
+#### Which services do you offer?
+
+SEO, GEO and AI Search strategy, web design and development, brand identity and logo, digital strategy, Google Ads and Meta campaigns, social media management and end-to-end digital project management.
+
+#### Do you work with clients outside Turkey?
+
+Yes. We are based in Istanbul, Turkey, and work with clients worldwide in Turkish and English.
+
+#### How do we start a project?
+
+Fill out the contact form on this page and tell us about your project; we'll get back to you shortly.
+
 ---
 
 ## Türkçe
@@ -245,3 +275,33 @@ Dijital pazarlama stratejileri, CGI, sosyal medya ve müşteri deneyimi üzerine
 Yazar ve araştırmacı Dr. Cemal Külünkoğlu'nun kişisel sitesi; Kur'an meali ve tefsiri, kitapları ve videoları tek çatı altında.
 
 - URL: https://www.cemalkulunkoglu.net
+
+### Sıkça sorulan sorular
+
+#### GEO (Generative Engine Optimization) nedir?
+
+GEO, bir web sitesini ChatGPT, Claude, Perplexity ve Google AI Overviews gibi yapay zeka cevap motorlarının bulabileceği, anlayabileceği ve kaynak olarak gösterebileceği hale getirmektir. SEO'yu tamamlar: SEO arama sonuçlarında üst sıralara çıkmayı, GEO ise yapay zekanın alıntıladığı kaynak olmayı hedefler.
+
+#### llms.txt nedir, siteme neden gerekli?
+
+llms.txt, sitenin kök dizininde duran ve kim olduğunuzu, ne sunduğunuzu ve önemli sayfalarınızı büyük dil modellerinin kolayca okuyabileceği düz metinle özetleyen bir dosyadır. llms-full.txt ile birlikte yapay zeka araçlarının işinizi doğru anlatmasına yardımcı olur.
+
+#### ChatGPT ve Claude gibi yapay zeka araçları siteme erişebilir mi?
+
+Ancak robots.txt dosyanız tarayıcılarına izin veriyorsa. robots.txt'yi GPTBot, OAI-SearchBot, ClaudeBot, PerplexityBot, Google-Extended ve Bingbot'a açıkça izin verecek şekilde yapılandırıyoruz; böylece içeriğiniz yapay zeka cevaplarında yer alabilir.
+
+#### IndexNow nedir?
+
+IndexNow, bir sayfa oluşturulduğunda, güncellendiğinde veya silindiğinde Bing ve Yandex gibi arama motorlarını anında haberdar eden bir protokoldür. Tarayıcıların değişikliği kendiliğinden keşfetmesini beklemeye gerek kalmaz.
+
+#### Hangi hizmetleri sunuyorsunuz?
+
+SEO, GEO ve AI Search stratejisi, web tasarımı ve geliştirme, marka kimliği ve logo, dijital strateji, Google Ads ve Meta kampanyaları, sosyal medya yönetimi ve uçtan uca dijital proje yönetimi.
+
+#### Türkiye dışındaki müşterilerle de çalışıyor musunuz?
+
+Evet. İstanbul merkezliyiz ve Türkçe ile İngilizce olarak dünyanın her yerinden müşterilerle çalışıyoruz.
+
+#### Bir projeye nasıl başlarız?
+
+Bu sayfadaki iletişim formunu doldurup projenizden bahsedin; en kısa sürede size dönelim.

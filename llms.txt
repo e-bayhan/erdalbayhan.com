@@ -5,6 +5,8 @@
 Website: https://www.erdalbayhan.com/
 Languages: English, Turkish
 Contact: contact form at https://www.erdalbayhan.com/#iletisim
+Founder: Erdal Bayhan — https://www.linkedin.com/in/erdalbayhan/
+Based in: Istanbul, Turkey · Serving clients in Turkey and worldwide
 
 ## Services
 
@@ -30,6 +32,16 @@ Contact: contact form at https://www.erdalbayhan.com/#iletisim
 - [Techie News 4 All](https://techienews4all.blogspot.com): English-language tech news and reviews blog.
 - [Digital Marketing Technologies](https://digital-mar-tech.blogspot.com): English-language digital marketing blog.
 - [Dr. Cemal Külünkoğlu](https://www.cemalkulunkoglu.net): Personal website of an author and researcher — Quran translation and commentary, books and videos.
+
+## FAQ
+
+- What is GEO (Generative Engine Optimization)? GEO is the practice of making a website easy for AI answer engines such as ChatGPT, Claude, Perplexity and Google AI Overviews to find, understand and cite. It complements SEO: SEO aims to rank in search results, GEO aims to be the source AI tools quote.
+- What is llms.txt and why does my site need it? llms.txt is a plain-text file at the root of your site that summarizes who you are, what you offer and your key pages in a format large language models can read easily. Together with llms-full.txt, it helps AI tools describe your business accurately.
+- Can AI tools like ChatGPT and Claude access my website? Only if your robots.txt allows their crawlers. We configure robots.txt to explicitly allow GPTBot, OAI-SearchBot, ClaudeBot, PerplexityBot, Google-Extended and Bingbot, so your content can appear in AI answers.
+- What is IndexNow? IndexNow is a protocol that instantly notifies search engines such as Bing and Yandex when a page is created, updated or deleted, instead of waiting for crawlers to discover the change.
+- Which services do you offer? SEO, GEO and AI Search strategy, web design and development, brand identity and logo, digital strategy, Google Ads and Meta campaigns, social media management and end-to-end digital project management.
+- Do you work with clients outside Turkey? Yes. We are based in Istanbul, Turkey, and work with clients worldwide in Turkish and English.
+- How do we start a project? Fill out the contact form on this page and tell us about your project; we'll get back to you shortly.
 
 ## Optional
 
