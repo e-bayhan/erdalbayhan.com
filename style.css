@@ -436,6 +436,17 @@ html[lang="en"] .lang-en { color: var(--accent-main); }
   transition-delay: 0.35s;
 }
 
+.hero-features {
+  list-style: none;
+  max-width: 640px;
+  margin: -1rem auto 2.5rem;
+  padding: 0;
+  font-size: clamp(0.9375rem, 2vw, 1.0625rem);
+  color: var(--text-muted);
+  line-height: 1.75;
+  transition-delay: 0.4s;
+}
+
 .hero-cta {
   display: flex;
   gap: 1rem;
@@ -807,11 +818,7 @@ html[lang="en"] .lang-en { color: var(--accent-main); }
 
   .about-grid { grid-template-columns: 1fr 1.6fr; }
 
-  /* 6-col base lets 3 cards/row (each span 2) and centers the last-row pair */
-  .services-grid  { grid-template-columns: repeat(6, 1fr); }
-  .service-card   { grid-column: span 2; }
-  .service-card:nth-child(7) { grid-column: 2 / 4; }
-  .service-card:nth-child(8) { grid-column: 4 / 6; }
+  .services-grid  { grid-template-columns: repeat(3, 1fr); }
 
   .portfolio-grid { grid-template-columns: repeat(3, 1fr); }
 }

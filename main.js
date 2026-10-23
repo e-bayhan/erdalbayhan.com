@@ -8,11 +8,13 @@ const TYPED = {
     'Dijital Görünürlük Ustalarıyız.',
     'Dijital Varlık Yöneticileriyiz.',
     'Dijital Rekabet Uzmanlarıyız.',
+    'SEO &amp; GEO &amp; AI Search Strateji Hacker\'larıyız.',
   ],
   en: [
     'Digital Presence Masters.',
     'Digital Assets Managers.',
     'Digital Competition Experts.',
+    'SEO &amp; GEO &amp; AI Search Strategy Hackers.',
   ],
 };
 
