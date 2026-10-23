@@ -1,4 +1,7 @@
 .DS_Store
 Thumbs.db
 vendor/
-contact.php
+# contact.php gizli ayarları — sunucuya elle yüklenir
+config.php
+logs/
+*.log

@@ -2,6 +2,12 @@ RewriteEngine On
 
 ErrorDocument 404 /404.html
 
+# Gizli ayarlar ve form hata kayıtları dışarıya kapalı
+<FilesMatch "^(config\.php|.*\.log)$">
+  Require all denied
+</FilesMatch>
+RewriteRule ^logs(/|$) - [F,L]
+
 # llms.txt / robots.txt UTF-8 olarak sunulsun
 AddDefaultCharset UTF-8
 AddCharset UTF-8 .txt .xml

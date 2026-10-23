@@ -248,9 +248,10 @@ function initForm() {
         throw new Error();
       }
     } catch {
+      /* Mesaj kaybolmasın: doğrudan e-posta adresini göster */
       status.textContent = currentLang === 'tr'
-        ? 'Bir hata oluştu. Lütfen tekrar deneyin.'
-        : 'Something went wrong. Please try again.';
+        ? 'Mesaj gönderilemedi. Lütfen tekrar deneyin ya da doğrudan erdalbayhan@gmail.com adresine yazın.'
+        : 'Your message could not be sent. Please try again or email us directly at erdalbayhan@gmail.com.';
       status.className = 'form-status error';
     } finally {
       btn.classList.remove('loading');
