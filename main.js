@@ -31,9 +31,10 @@ function applyLang(lang) {
   document.documentElement.lang = lang;
   localStorage.setItem('eb-lang', lang);
 
-  /* Text nodes */
+  /* Text nodes — metin zaten doğruysa dokunma: yeniden boyama LCP'yi geciktirir */
   document.querySelectorAll('[data-tr][data-en]').forEach(el => {
-    el.textContent = el.dataset[lang];
+    const text = el.dataset[lang];
+    if (el.textContent.trim() !== text) el.textContent = text;
   });
 
   /* Placeholders */

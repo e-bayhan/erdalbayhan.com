@@ -372,11 +372,12 @@ html[lang="en"] .lang-en { color: var(--accent-main); }
   to   { transform: translateX(0); }
 }
 
+/* Mobilde küçük karolar: hero yazısından büyük olup LCP öğesi olmasınlar */
 .marquee-track img {
-  width: 520px;
-  height: 324px;
+  width: 200px;
+  height: 125px;
   object-fit: cover;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-sm);
   flex-shrink: 0;
   display: block;
 }
@@ -885,6 +886,7 @@ html[lang="en"] .lang-en { color: var(--accent-main); }
    MEDIA QUERIES — tablet 640px
 ═══════════════════════════════════════════ */
 @media (min-width: 640px) {
+  .marquee-track img { width: 520px; height: 324px; border-radius: var(--radius-md); }
   .services-grid  { grid-template-columns: repeat(2, 1fr); }
   .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
 }
