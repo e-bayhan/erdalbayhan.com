@@ -12,6 +12,16 @@ RewriteRule ^logs(/|$) - [F,L]
 AddDefaultCharset UTF-8
 AddCharset UTF-8 .txt .xml
 
+# Statik dosyalar 1 yıl önbellekte.
+# style.css / main.js her değişiklikte ?v= ile yeni adres alır; bir görseli
+# değiştirirken aynı adı kullanma (yeni dosya adı ver), yoksa eskisi görünür.
+<IfModule mod_headers.c>
+  <FilesMatch "\.(css|js|woff2|webp|jpg|jpeg|png|svg|ico)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+    Header unset Expires
+  </FilesMatch>
+</IfModule>
+
 # Non-www → www yönlendirmesi
 RewriteCond %{HTTP_HOST} ^erdalbayhan\.com$ [NC]
 RewriteRule ^(.*)$ https://www.erdalbayhan.com/$1 [R=301,L]
