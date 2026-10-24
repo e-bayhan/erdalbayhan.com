@@ -18,54 +18,26 @@ const TYPED = {
   ],
 };
 
-/* ── State ── */
-let currentLang = localStorage.getItem('eb-lang') || 'en';
-
-let typedInstance = null;
+/* ── State: sayfanın dili adresten gelir (/ = EN, /tr/ = TR; tr/index.html üretilir) ── */
+const currentLang = document.documentElement.lang === 'tr' ? 'tr' : 'en';
 
 /* ════════════════════════════════════════════
    LANGUAGE
 ════════════════════════════════════════════ */
-function applyLang(lang) {
-  currentLang = lang;
-  document.documentElement.lang = lang;
-  localStorage.setItem('eb-lang', lang);
+function initLangSwitch() {
+  const link = document.getElementById('lang-btn');
+  if (!link) return;
 
-  /* Text nodes — metin zaten doğruysa dokunma: yeniden boyama LCP'yi geciktirir */
-  document.querySelectorAll('[data-tr][data-en]').forEach(el => {
-    const text = el.dataset[lang];
-    if (el.textContent.trim() !== text) el.textContent = text;
+  /* Tercihi hatırla ve aynı bölümde kal */
+  link.addEventListener('click', () => {
+    try { localStorage.setItem('eb-lang', link.hreflang); } catch (e) {}
+    link.href = link.getAttribute('href').split('#')[0] + location.hash;
   });
-
-  /* Placeholders */
-  document.querySelectorAll('[data-placeholder-tr]').forEach(el => {
-    el.placeholder = lang === 'tr'
-      ? el.dataset.placeholderTr
-      : el.dataset.placeholderEn;
-  });
-
-  /* Page meta */
-  if (lang === 'en') {
-    document.title = 'On-Duty Masters — Seasoned Digital Agency';
-    document.querySelector('meta[name="description"]').content =
-      'We help brands master their digital presence, manage their digital assets, and win the digital competition. Design and develop new ideas, create brand identity, manage projects that will grow your business.';
-  } else {
-    document.title = 'On-Duty Masters — Tecrübeli Dijital Ajans';
-    document.querySelector('meta[name="description"]').content =
-      'Markanızın dijital görünürlüğünü güçlendiriyor, dijital varlıklarını yönetiyor ve dijital rekabette öne çıkmasını sağlıyoruz. Yeni fikirleri tasarlıyor, marka kimliği oluşturuyor, işinizi büyütecek projeleri yönetiyoruz.';
-  }
-
-  /* Reinit Typed with new strings */
-  if (typedInstance) {
-    typedInstance.destroy();
-    document.getElementById('typed-output').textContent = '';
-  }
-  initTyped(lang);
 }
 
 function initTyped(lang) {
   if (typeof Typed === 'undefined') return;
-  typedInstance = new Typed('#typed-output', {
+  new Typed('#typed-output', {
     strings: TYPED[lang],
     typeSpeed: 58,
     backSpeed: 32,
@@ -75,10 +47,6 @@ function initTyped(lang) {
     cursorChar: '|',
   });
 }
-
-document.getElementById('lang-btn').addEventListener('click', () => {
-  applyLang(currentLang === 'tr' ? 'en' : 'tr');
-});
 
 /* ════════════════════════════════════════════
    NAVBAR
@@ -236,7 +204,7 @@ function initForm() {
     status.className = 'form-status';
 
     try {
-      const res  = await fetch('contact.php', { method: 'POST', body: new FormData(form) });
+      const res  = await fetch('/contact.php', { method: 'POST', body: new FormData(form) });
       const json = await res.json();
 
       if (json.success) {
@@ -274,7 +242,8 @@ function setYear() {
 ════════════════════════════════════════════ */
 document.addEventListener('DOMContentLoaded', () => {
   setYear();
-  applyLang(currentLang);
+  initLangSwitch();
+  initTyped(currentLang);
   initReveal();
   initSliders();
   initTilt();

@@ -1,0 +1,8 @@
+#!/bin/sh
+# index.html (veya üretici) commit'e giriyorsa TR sayfasını, JSON-LD'yi ve sitemap'i yeniden üret.
+# Etkinleştirme (bir kez): git config core.hooksPath .githooks
+
+if git diff --cached --name-only | grep -qE '^(index\.html|tools/build-i18n\.py)$'; then
+  python3 tools/build-i18n.py || exit 1
+  git add index.html tr/index.html sitemap.xml
+fi

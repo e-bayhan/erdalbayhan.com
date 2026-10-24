@@ -103,10 +103,14 @@ font-family: 'Plus Jakarta Sans', sans-serif;
 
 ## Çoklu Dil (i18n)
 
-- `data-tr` ve `data-en` attribute'ları ile tüm metinler HTML'de ikili tutulur
-- JS ile `<html lang="...">` ve görünürlük toggle edilir
-- Aktif dil `localStorage`'da saklanır
-- Tarayıcı dili otomatik algılanır (varsayılan: TR)
+- İki ayrı adres: `/` = EN (kaynak `index.html`), `/tr/` = TR (`tr/index.html`, **üretilir — elle düzenleme**)
+- `index.html`'de her metin `data-tr` / `data-en` taşır; görünen metin EN yazılır
+- `tools/build-i18n.py` TR sayfayı, her iki sayfanın JSON-LD'sini ve `sitemap.xml`'i üretir;
+  `.githooks/pre-commit` index.html commit'lenince otomatik çalıştırır
+  (yeni klonda bir kez: `git config core.hooksPath .githooks`)
+- Yeni öznitelik metni (aria-label, alt) eklenirse TR karşılığı `ATTR_TR` listesine eklenir
+- Her iki sayfada `hreflang` (en / tr / x-default); TR/EN butonu diğer adrese giden bağlantıdır
+- Tercih `localStorage` (`eb-lang`) ile hatırlanır; tercih yoksa Türkçe tarayıcı `/`'den `/tr/`'ye yönlenir
 
 ## SEO & Meta
 
@@ -157,7 +161,7 @@ To           : erdalbayhan@gmail.com
 ## Geliştirme Notları
 
 - Build yok, dosyalar doğrudan Hostinger File Manager veya FTP ile yüklenir
-- Tüm asset'ler relatif path ile referans verilir
+- Tüm asset'ler kökten mutlak path ile referans verilir (`/assets/...`) — `/tr/` altında da çalışsın diye
 - JS `defer` attribute ile yüklenir
 - CSS önce, JS sonra (body kapanmadan önce)
 - `console.log` production'da bırakılmaz

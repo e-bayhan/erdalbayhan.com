@@ -6,7 +6,7 @@ ErrorDocument 404 /404.html
 <FilesMatch "^(config\.php|.*\.log)$">
   Require all denied
 </FilesMatch>
-RewriteRule ^logs(/|$) - [F,L]
+RewriteRule ^(logs|tools|\.githooks)(/|$) - [F,L]
 
 # llms.txt / robots.txt UTF-8 olarak sunulsun
 AddDefaultCharset UTF-8
