@@ -124,6 +124,12 @@ Personal website of author and researcher Dr. Cemal Külünkoğlu, bringing toge
 
 - URL: https://www.cemalkulunkoglu.net
 
+#### YemekKartı Seç
+
+A meal card comparison platform for companies: compare 9 providers side by side, calculate 2026 tax and social security savings, and request free quotes.
+
+- URL: https://yemekkartisec.com/
+
 ### Frequently asked questions
 
 #### What is GEO (Generative Engine Optimization)?
@@ -275,6 +281,12 @@ Dijital pazarlama stratejileri, CGI, sosyal medya ve müşteri deneyimi üzerine
 Yazar ve araştırmacı Dr. Cemal Külünkoğlu'nun kişisel sitesi; Kur'an meali ve tefsiri, kitapları ve videoları tek çatı altında.
 
 - URL: https://www.cemalkulunkoglu.net
+
+#### YemekKartı Seç
+
+Şirketler için yemek kartı karşılaştırma platformu; 9 firmayı tek tabloda karşılaştırma, 2026 vergi ve SGK tasarrufu hesaplayıcı ve ücretsiz teklif alma.
+
+- URL: https://yemekkartisec.com/
 
 ### Sıkça sorulan sorular
 
