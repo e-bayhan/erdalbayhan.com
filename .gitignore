@@ -5,3 +5,5 @@ vendor/
 config.php
 logs/
 *.log
+# scroll-craft çalışma klasörünün yeri (yerel)
+.scrollcraft.json

@@ -5,6 +5,7 @@ User-agent: *
 Allow: /
 Disallow: /phpmailer/
 Disallow: /contact.php
+Disallow: /check.php
 
 # OpenAI
 User-agent: GPTBot

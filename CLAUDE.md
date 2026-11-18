@@ -2,104 +2,74 @@
 
 ## Proje Özeti
 
-Kişisel/profesyonel portföy ve hizmet tanıtım sitesi.  
-Tek sayfalık (single-page scroll), statik, mobil öncelikli.  
-Hostinger'da barındırılır — build adımı yoktur.
+On-Duty Masters (Erdal Bayhan) ajans sitesi: SEO, GEO ve AI Search odaklı.  
+Tek sayfa, bölümlü editoryal yapı (scroll-craft skill'i ile tasarlandı, Kasım 2026), statik, mobil öncelikli.  
+Hostinger'da barındırılır; build adımı yok (TR sayfa üretimi commit hook'unda).
 
 ## Tech Stack
 
-- **HTML5** — semantik yapı, tek `index.html`
-- **CSS3** — custom properties, Flexbox/Grid, animasyonlar
-- **Vanilla JS** — sıfır framework, sıfır bundler
-- **Typed.js** (CDN) — hero yazı animasyonu
-- **Google Fonts** (CDN) — Plus Jakarta Sans
-- **PHPMailer** (Composer veya tek dosya) — Gmail SMTP ile mail gönderimi
+- **HTML5**: semantik yapı, kaynak tek `index.html` (TR sürümü üretilir)
+- **scroll-craft engine** (`scrollcraft.js` / `scrollcraft.css`): scroll ilerlemesi, pin, cue, reveal, parallax, count. **Engine dosyalarını düzenleme**; sayfaya özel davranış `main.js` ve `style.css`'te
+- **Vanilla JS** (`main.js`): folio, tarayıcı okuması paneli, canlı test, portföy dizini, form
+- **Font**: Plus Jakarta Sans, sitede barındırılır (`assets/fonts`, latin + latin-ext); Google Fonts kullanılmaz
+- **PHP**: `contact.php` (PHPMailer, Gmail SMTP + mail() yedeği), `check.php` (canlı görünürlük testi)
 
 ## Dosya Yapısı
 
 ```
 erdalbayhan.com/
-├── index.html
-├── style.css
-├── main.js
-├── contact.php           # Gmail SMTP mail gönderici (PHPMailer)
-├── assets/
-│   ├── images/          # Portföy ekran görüntüleri (portfolio-1.webp …)
-│   ├── og-image.jpg     # Open Graph görseli
-│   └── favicon.ico
-└── CLAUDE.md
+├── index.html            # EN kaynak (/)
+├── tr/index.html         # TR, tools/build-i18n.py üretir; elle düzenleme
+├── scrollcraft.css/.js   # engine, dokunma
+├── style.css             # sayfa tasarımı (tokenlar + bölümler)
+├── main.js               # sayfa davranışı
+├── check.php             # görünürlük testi (robots.txt, sitemap, llms.txt, meta, JSON-LD, hreflang)
+├── contact.php           # form → Gmail (config.php sunucuda, git'te değil)
+├── tools/build-i18n.py   # TR sayfa + JSON-LD + sitemap üretici
+├── assets/images/        # portfolio-N-M.webp (1600), md/ (800, kartlar), sm/ (440)
+└── llms.txt, llms-full.txt, robots.txt, sitemap.xml, 404.html
 ```
 
 ## Design System
 
-### Renkler
+Altı renk rolü, tek aksan (kobalt). Bölümler gece ve kâğıt zemin arasında sert kesimle geçer; aksanın iki açıklığı var (aynı ton).
 
 ```css
---bg-primary:    #0D0F1A;   /* Ana zemin */
---bg-card:       #1A1D2E;   /* Kart yüzeyi */
---accent-main:   #FF6B2B;   /* Turuncu — ana aksan */
---accent-amber:  #FFB347;   /* Amber — ikincil */
---accent-coral:  #FF4757;   /* Mercan — üçüncül / hover */
---text-primary:  #F0F0F5;   /* Ana yazı */
---text-muted:    #8B8FA8;   /* Soluk yazı */
---gradient-main: linear-gradient(135deg, #FF6B2B, #FFB347);
---gradient-alt:  linear-gradient(135deg, #FF6B2B, #FF4757);
+--sc-canvas: #0D0F1A;  --sc-surface: #151827;  /* gece zemin, yüzey */
+--sc-ink: #EEF0F7;     --sc-ink-soft: #A2A8C4; /* yazı, ikincil yazı */
+--sc-accent: #7D9CFF;  /* gecede aksan */
+--paper: #ECEEF4; --paper-ink: #121526; --paper-soft: #4A5070; --paper-accent: #2B4CC2;
 ```
 
-### Tipografi
-
-```css
-font-family: 'Plus Jakarta Sans', sans-serif;
---fs-hero:   clamp(2.5rem, 6vw, 5rem);
---fs-h2:     clamp(1.75rem, 4vw, 3rem);
---fs-h3:     clamp(1.25rem, 2.5vw, 1.75rem);
---fs-body:   1rem;          /* 16px */
---fs-small:  0.875rem;      /* 14px */
-```
-
-### Spacing
-
-```
-4px / 8px / 16px / 24px / 32px / 48px / 64px / 96px
-```
-
-### Border Radius
-
-```
---radius-sm: 8px;
---radius-md: 16px;
---radius-lg: 24px;
---radius-pill: 999px;
-```
+- Tipografi, boşluk, gölge ve hareket tokenları `scrollcraft.css`'ten gelir (`--sc-t-*`, `--sc-1…11`, `--sc-e1/2/3`, `--sc-ease-out`)
+- Yasaklar (scroll-craft taste floor): gradient yazı, görünen metinde em dash (—), her bölümde eyebrow, scroll ipucu, aynı kart ızgarası, uydurma rakam, `transition: all`
 
 ## Bölüm Yapısı (Anchor URL'leri)
 
-| # | id | TR Başlık | EN Başlık |
-|---|-----|-----------|-----------|
-| 1 | `#hero` | — | — |
-| 2 | `#hakkimda` | Hakkımda | About |
-| 3 | `#hizmetler` | Hizmetler | Services |
-| 4 | `#portfolyo` | Portföy | Portfolio |
-| 5 | `#iletisim` | İletişim | Contact |
+| # | id | Bölüm | His |
+|---|-----|-------|-----|
+| 0 | `#hero` | Başlık sayfası (sadece tipografi, katmanlı) | sakin güven |
+| 1 | `#gorunmez` | Görünmez: gerçek robots.txt örneği | huzursuzluk |
+| 2 | (ara) | Tek satır, bilerek boş | merak |
+| 3 | `#test` | Tarayıcı gibi okumak: canlı test (tepe noktası, pinli) | tanıma |
+| 4 | `#hizmetler` | Yöntem: Bulunmak / Kazanmak / Kurmak | rahatlama |
+| 5 | `#portfolyo` | İşler: 11 site dizini + görsel sütunu | güven |
+| 6 | `#sss` | Sorular (FAQPage) | netlik |
+| 7 | `#iletisim` | Künye ve form (pinli kapanış) | çözüm |
 
-## Hizmetler (7 adet)
+## Hizmetler (8 kalem, 3 fiil)
 
-1. Web Tasarımı / Web Design
-2. Web Geliştirme / Web Development
-3. Marka Kimliği & Logo / Brand Identity & Logo
-4. Dijital Projeler / Digital Projects
-5. SEO
-6. GEO
-7. SEM
+- **Bulunmak:** SEO, GEO ve AI Search stratejisi (teknik kontrol listesiyle) · Dijital görünürlük
+- **Kazanmak:** Dijital rekabet (Google Ads, Meta) · Dijital strateji · Dijital varlıklar
+- **Kurmak:** Tasarım ve geliştirme · Marka kimliği · Dijital fikirler ve projeler
 
 ## Animasyon Kuralları
 
-- **Scroll animasyonları:** `IntersectionObserver` ile `.reveal` class toggle — CSS transition
-- **Hero yazı:** `Typed.js` ile meslekler arasında geçiş
-- **Arka plan:** CSS animated gradient blob (pure CSS, JS yok)
-- **Hover efektleri:** Pure CSS transform + box-shadow
-- **Portföy kartları:** Hover'da 3D tilt (`mousemove` JS) + screenshot geçiş overlay
-- **Performans:** `will-change` sadece aktif animasyonlarda, `prefers-reduced-motion` desteklenir
+- Scroll davranışları engine attribute'larıyla: `data-sc-act` (flow / pin), `data-sc-cue`, `data-sc-reveal`, `data-sc-parallax`, `data-sc-count`, `data-sc-in`
+- İmza hareketi: `#test` pinliyken scroll, paneldeki satırları tarayıcı gibi sırayla "okur" (`--sc-p` → `main.js`)
+- Pinli bir ara bölümün son cue'su 1'de biten iki değerli pencereyle kapanır; sadece son bölüm (künye) tutar
+- Sadece `transform` / `opacity`; `prefers-reduced-motion` içerikten bir şey saklamaz
+- Doğrulama: scroll-craft `shoot.mjs` (masaüstü, 390×844, 360×640, reduced motion) ve Lighthouse mobil ≥ 95
 
 ## Çoklu Dil (i18n)
 
@@ -114,10 +84,10 @@ font-family: 'Plus Jakarta Sans', sans-serif;
 
 ## SEO & Meta
 
-- `<title>`, `<meta description>` her dil için JS ile güncellenir
-- Open Graph etiketleri statik (TR)
-- `canonical` tag: `https://erdalbayhan.com`
-- Structured Data: `Person` schema (JSON-LD)
+- Başlık, açıklama, OG/Twitter, canonical ve hreflang her dil için statik; TR değerleri `build-i18n.py` içindeki `META`'da
+- `canonical`: `https://www.erdalbayhan.com/` ve `/tr/`
+- Structured Data (JSON-LD `@graph`): Organization + ProfessionalService, Person, WebSite, WebPage, portföy ItemList, FAQPage. Sayfa metninden üretilir, elle yazılmaz
+- llms.txt / llms-full.txt / robots.txt (AI tarayıcılarına açık) / sitemap.xml / IndexNow
 
 ## Erişilebilirlik
 
@@ -129,9 +99,9 @@ font-family: 'Plus Jakarta Sans', sans-serif;
 
 ## Portföy Kartları
 
-- 6 kart, her biri: proje adı, kısa açıklama, teknoloji etiketleri, ekran görüntüsü, dış link
-- Görsel: `/assets/images/portfolio-{1-6}.webp` (optimize edilmiş, max 800×500)
-- Hover: 3D tilt + "Siteyi Gör / View Site" overlay
+- `#portfolyo` içindeki `<ol class="index">`: her site bir `li.entry` (ad, data-tr/data-en açıklama, link, md görsel). Statik HTML, JS'le üretilmez (AI tarayıcıları okusun)
+- Yeni site: 3 ekran görüntüsü → `portfolio-N-{1,2,3}.webp` + `md/` (800, q72) + `sm/` (440, q42); entry'deki `width`/`height` görselin gerçek boyutu olmalı
+- Masaüstünde sağdaki görsel sütunu üzerine gelinen / ekranın ortasındaki siteyi gösterir
 
 ## İletişim Formu
 
@@ -155,8 +125,8 @@ To           : erdalbayhan@gmail.com
 
 > **Kurulum notu:** Gmail hesabında 2 Adımlı Doğrulama açık olmalı.  
 > Ardından Google Hesabı → Güvenlik → "Uygulama Şifreleri" bölümünden  
-> "Posta / Diğer" için 16 haneli şifre oluşturulur. Bu şifre `contact.php`'ye yazılır.  
-> Şifreyi asla versiyona (git) commit etme — `.gitignore`'a ekle veya ayrı `config.php` kullan.
+> "Posta / Diğer" için 16 haneli şifre oluşturulur. Bu şifre sunucudaki `config.php`'ye yazılır.  
+> `config.php` git'te değil (repo herkese açık); Gmail reddederse `contact.php` mail() ile dener ve hatayı `logs/` altına yazar.
 
 ## Geliştirme Notları
 

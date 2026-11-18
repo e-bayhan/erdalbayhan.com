@@ -27,8 +27,8 @@ URLS = {'en': BASE, 'tr': BASE + 'tr/'}
 
 META = {
     'en': {
-        'title': 'On-Duty Masters — Seasoned Digital Agency',
-        'description': 'We help brands master their digital presence, manage their digital assets, and win the digital competition. Design and develop new ideas, create brand identity, manage projects that will grow your business.',
+        'title': 'On-Duty Masters: SEO, GEO and AI Search Strategy Agency',
+        'description': 'We make sure search engines and AI assistants can find, read and cite your website. Check yours in a few seconds.',
         'social': 'SEO & GEO & AI Search strategy, web design and development, brand identity and digital projects that grow your business.',
         'image_alt': 'On-Duty Masters — "Seasoned" SEO & GEO & AI Search Strategy Hackers',
         'locale': 'en_US',
@@ -38,8 +38,8 @@ META = {
         'portfolio': 'Portfolio',
     },
     'tr': {
-        'title': 'On-Duty Masters — Tecrübeli Dijital Ajans',
-        'description': 'Markanızın dijital görünürlüğünü güçlendiriyor, dijital varlıklarını yönetiyor ve dijital rekabette öne çıkmasını sağlıyoruz. Yeni fikirleri tasarlıyor, marka kimliği oluşturuyor, işinizi büyütecek projeleri yönetiyoruz.',
+        'title': 'On-Duty Masters: SEO, GEO ve AI Search Strateji Ajansı',
+        'description': 'Sitenizi arama motorlarının ve yapay zekâ asistanlarının bulabilmesini, okuyabilmesini ve kaynak gösterebilmesini sağlıyoruz. Sitenizi birkaç saniyede kontrol edin.',
         'social': 'SEO, GEO ve AI Search stratejisi, web tasarımı ve geliştirme, marka kimliği ve işinizi büyütecek dijital projeler.',
         'image_alt': 'On-Duty Masters — "Tecrübeli" SEO, GEO ve AI Search strateji ajansı',
         'locale': 'tr_TR',
@@ -52,20 +52,18 @@ META = {
 
 # EN kaynaktaki öznitelik metinleri → TR
 ATTR_TR = [
-    ('aria-label="Main menu"', 'aria-label="Ana menü"'),
-    ('aria-label="Menu"', 'aria-label="Menü"'),
-    ('aria-label="Close menu"', 'aria-label="Menüyü kapat"'),
-    ('aria-label="Intro"', 'aria-label="Giriş"'),
-    ('aria-label="On-Duty Masters — Home"', 'aria-label="On-Duty Masters — Ana Sayfa"'),
-    ('aria-label="On-Duty Masters — Back to top"', 'aria-label="On-Duty Masters — Sayfa Başı"'),
-    ('alt="SaasMetre — Home page"', 'alt="SaasMetre — Ana sayfa"'),
-    ('alt="SaasMetre — Tool finder"', 'alt="SaasMetre — Araç bulma"'),
-    ('alt="SaasMetre — Comparison"', 'alt="SaasMetre — Karşılaştırma"'),
+    ('aria-label="Chapters"', 'aria-label="Bölümler"'),
+    ('aria-label="On-Duty Masters, back to top"', 'aria-label="On-Duty Masters, başa dön"'),
+    ('aria-label="Interlude"', 'aria-label="Ara"'),
 ]
 
 LANG_LINK = {
-    'en': '<a class="lang-btn" id="lang-btn" href="/tr/" hreflang="tr" aria-label="Türkçe sürüm / Turkish version">',
-    'tr': '<a class="lang-btn" id="lang-btn" href="/" hreflang="en" aria-label="English version / İngilizce sürüm">',
+    'en': '<a class="langlink" href="/tr/" hreflang="tr" lang="tr" aria-label="TR, Türkçe sürüm">TR</a>',
+    'tr': '<a class="langlink" href="/" hreflang="en" lang="en" aria-label="EN, English version">EN</a>',
+}
+FOOT_LINK = {
+    'en': '<a href="/tr/" hreflang="tr" lang="tr">Türkçe</a>',
+    'tr': '<a href="/" hreflang="en" lang="en">English</a>',
 }
 
 REDIRECT_EN = """      var wantsTr = pref ? pref === 'tr' : /^tr\\b/i.test(navigator.language || '');
@@ -94,9 +92,9 @@ def replace_once(t, old, new, label):
 
 def extract(t):
     """Sayfadaki hizmet, portföy ve SSS metinlerini (tr, en) çiftleri olarak çıkar."""
-    svc = re.findall(r'<h3 data-tr="(.*?)" data-en="(.*?)">.*?<p data-tr="(.*?)"\s+data-en="(.*?)"',
+    svc = re.findall(r'<dt data-tr="(.*?)" data-en="(.*?)">.*?<dd data-tr="(.*?)"\s+data-en="(.*?)"',
                      section(t, 'id="hizmetler"', 'id="portfolyo"'), re.S)
-    port = re.findall(r'<h3>(.*?)</h3>\s*<p data-tr="(.*?)"\s+data-en="(.*?)">.*?href="(http[^"]+)"',
+    port = re.findall(r'<a href="(http[^"]+)"[^>]*>\s*<h3>(.*?)</h3>.*?<p data-tr="(.*?)"\s+data-en="(.*?)"',
                       section(t, 'id="portfolyo"', 'id="sss"'), re.S)
     faq = re.findall(r'<summary data-tr="(.*?)"\s+data-en="(.*?)">.*?<p data-tr="(.*?)"\s+data-en="(.*?)"',
                      section(t, 'id="sss"', 'id="iletisim"'), re.S)
@@ -149,7 +147,7 @@ def json_ld(t, lang):
                 {'@type': 'ListItem', 'position': n + 1,
                  'item': {'@type': 'WebSite', 'name': unesc(name), 'url': link,
                           'description': unesc(en if lang == 'en' else tr), 'creator': {'@id': org}}}
-                for n, (name, tr, en, link) in enumerate(port)],
+                for n, (link, name, tr, en) in enumerate(port)],
         },
         {
             '@type': 'FAQPage', '@id': url + '#faq',
@@ -199,6 +197,7 @@ def to_turkish(t):
     # Dil tercihi yönlendirmesi ve dil bağlantısı
     t = replace_once(t, REDIRECT_EN, REDIRECT_TR, 'dil yönlendirmesi')
     t = replace_once(t, LANG_LINK['en'], LANG_LINK['tr'], 'dil bağlantısı')
+    t = replace_once(t, FOOT_LINK['en'], FOOT_LINK['tr'], 'künye dil bağlantısı')
 
     # Metin öğeleri: içerik data-en ile aynıysa data-tr ile değiştir
     def swap(mm):
@@ -218,7 +217,6 @@ def to_turkish(t):
     # Öznitelik metinleri
     for a, b in ATTR_TR:
         t = t.replace(a, b)
-    t = re.sub(r' — screenshot (\d)"', r' — görsel \1"', t)
     return t
 
 
